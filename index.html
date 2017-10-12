@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+*{margin:0; padding:0;}
+      body{
+          overflow: scroll;
+          margin : 0 auto;
+          width:1060px;
+          } 
+      .logo{
+          display: inline;
+          width: 250px;
+          padding: 10px;
+          clear: both;
+      }
+      .mainLogo{
+          padding: 20px;
+      }
+      .topMenu{
+          margin-top: 60px;
+          font-size: 12px;
+          font-weight: 600;
+          width: 620px;
+          float: right;
+      }
+      .topMenu a{/*사이 세로줄,텍스트*/
+          border-right:solid 1px gray;
+          display: block;
+          float: left;
+          width: 64px;
+          padding: 8px 2px;
+          text-align: center;
+      }
+      .topMenu a:nth-child(6){border-right:none;}
+      .hSearch{
+          border: 2px solid skyblue;
+          border-radius: 3px;
+          padding: 7.5px;
+      }
+      .keyword{/*입력박스*/
+          border: 2px solid skyblue;
+          border-radius: 3px;
+          display: block;
+          float: left;
+          margin-left: 10px;
+          width: 150px;
+          height: 30px;
+      }
+	img{border:0; margin:0px; padding: 0;}
+	ul, li{list-style-type:none;}
+	a{
+		text-decoration:none;
+		color:#000;
+	}
+      nav{
+          margin-top: 12px;
+          position: absolute;
+          width:1060px;
+          transition: height, 2s;
+          height:50px;
+          clear: both;
+    }
+      .hn1{
+              background:#DAD9FF;
+              border-radius: 10px;
+              height: 28px;
+              width: 265px;
+              top: -14px;
+              padding-top: 12px;
+          }
+      .hn2{
+              background:#EAEAEA;
+              border-radius: 10px;
+              height: 28px;
+              width: 265px;
+              top: -14px;
+              padding-top: 12px;
+          }
+      .hn3{
+              background:#D9E5FF;
+              border-radius: 10px;
+              height: 28px;
+              width: 265px;
+              top: -14px;
+              padding-top: 12px;
+          }
+      .hn4{
+              background:#D4F4FA;
+              border-radius: 10px;
+              height: 28px;
+              width: 265px;
+              top: -14px;
+              padding-top: 12px;
+          }
+      nav ul li div.m1{
+				background: #DAD9FF;
+                  opacity: 0.9;
+				position:relative;
+				top:15px;
+      }
+      nav ul li div.m1 ul{
+				position:relative;
+				left:0px;
+                font-size: 13px;
+	}
+      nav ul li div.m2{
+				background:#EAEAEA;
+                  opacity: 0.9;
+				position:relative;
+				top:15px; 
+				left:-265px;
+	}
+	nav ul li div.m2 ul{
+				position:relative;
+				left:0px;
+                font-size: 13px;
+	}
+      nav ul li div.m3{
+				background:#D9E5FF;
+                  opacity: 0.9;
+				position:relative;
+				top:15px; 
+				left:-530px;
+	}
+	nav ul li div.m3 ul{
+				position:relative;
+				left:0px;
+                font-size: 13px;
+	}
+      nav ul li div.m4{
+				background:#D4F4FA;
+                  opacity: 0.9;
+				position:relative;
+				top:15px; 
+				left:-795px;
+          
+	}
+	nav ul li div.m4 ul{
+				position:relative;
+				left:0px;
+                font-size: 13px;
+	}
+	nav ul li{/*네비 제목들*/
+		display:inline;
+		float:left;
+		width:200px;
+		position:relative;
+		margin-top:3px;
+		padding-bottom:10px;
+        text-align:left;
+	}
+	nav ul li a{
+        color:black;
+		text-shadow:0 1px 1px gray;
+		display:block;
+		width:265px;
+	}
+	nav ul li a:hover{
+		font-weight:bold;
+		color:grey;
+		text-shadow:0 0 1px blanchedalmond;
+        
+	}
+	nav ul li:hover div{/*여기요!!!!!!*/
+		width:1060px;
+		height:300px;
+        border-radius: 10px;
+	}
+	nav ul li div{
+        margin-top: 5px;
+		width:1060px;
+		height:0;
+		overflow:hidden;
+		transition:all 0.5s;
+        border-radius: 10px;
+	}
+      .m1_1 ul li{
+          margin: 10px 0 0 10px;
+          line-height: 10px;
+      }
+            .m2_1 ul li{
+          margin: 10px 0 0 10px;
+          line-height: 10px;
+      }
+            .m3_1 ul li{
+          margin: 10px 0 0 10px;
+          line-height: 10px;
+      }
+            .m4_1 ul li{
+          margin: 10px 0 0 10px;
+          line-height: 10px;
+      }
+      
+
+      .aaa{
+          padding-top: 10px;
+      }
+      
+	.hn1, .hn2, .hn3, .hn4 {
+				margin:14px 0 0 0;
+                text-align: center;
+                
+	}
+      .mainHeader{
+          background-color: #EAEAE0;
+          width: 1060px;
+          height:510px;
+          margin-top: 70px;
+          clear: both;
+      }
+      
+      
+        .mainSlider1{
+           
+        width:500px;
+		height:231px;
+        background:url(images/03_스승의날MOB.png) no-repeat center center padding-box;
+        display: block;
+        float:left;
+        margin: 17px 28px;
+        cursor:pointer;
+        animation-duration:3s;
+		animation-name:myani;
+		animation-direction:alternate;
+		animation-iteration-count:infinite;
+      }
+        .mainSlider2{
+        width:500px;
+		height:231px;
+        background:url(images/01_1.png) no-repeat center center padding-box;
+        display: block;
+        float:left;
+        margin: -5px 28px;
+        cursor:pointer;
+        animation-duration:3s;
+		animation-name:myani2;
+		animation-direction:alternate;
+		animation-iteration-count:infinite;
+      }
+      
+        @keyframes myani{
+		            0%{background:url(images/03_a.png);}
+                    50%{background:url(images/00-b.png);}
+		            100%{background:url(images/02_c.png);}
+	}
+        @keyframes myani2{
+		            0%{background:url(images/04_a.png);}
+                    50%{background:url(images/05_b.png);}
+		            100%{background:url(images/06_c.png);}
+	}
+      
+        .Banner_hh{
+            width: 231px;
+            height: 230px;
+            padding: 17px 0;
+            
+        float:left;
+        cursor:pointer;
+      }
+        .Banner_gg{
+            width: 231px;
+            height: 230px;
+            padding: 17px 10px;
+        float:left;
+        cursor:pointer;
+      }
+        .Banner_is{
+            width: 231px;
+            height: 230px;
+            margin:  -6px 0;
+        float:left;
+        cursor:pointer;
+      }
+      .Banner_gj{
+             width: 231px;
+            height: 230px;
+            margin:  -6px 10px;
+        float:left;
+        cursor:pointer;
+      }
+      .middleM{
+          width: 1060px;
+          height: 103px;}
+      .middleM a{
+          
+          float: left;
+          margin: 0 2px;
+      }
+
+      a.subN1{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner1.png) no-repeat;
+      }
+      a.subN1:hover{
+                    background: url(images/img_topbanner1on.png) no-repeat;
+      }
+      a.subN2{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner2.png) no-repeat;
+      }
+      a.subN2:hover{
+                    background: url(images/img_topbanner2on.png) no-repeat;
+      }
+        a.subN3{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner3.png) no-repeat;
+      }
+      a.subN3:hover{
+                    background: url(images/img_topbanner3on.png) no-repeat;
+      }
+        a.subN4{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner4.png) no-repeat;
+      }
+      a.subN4:hover{
+                    background: url(images/img_topbanner4on.png) no-repeat;
+      }
+        a.subN5{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner5.png) no-repeat;
+      }
+      a.subN5:hover{
+                    background: url(images/img_topbanner5on.png) no-repeat;
+      }
+        a.subN6{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner6.png) no-repeat;
+      }
+      a.subN6:hover{
+                    background: url(images/img_topbanner6on.png) no-repeat;
+      }
+      a.subN7{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner7.png) no-repeat;
+      }
+      a.subN7:hover{
+                    background: url(images/img_topbanner7on.png) no-repeat;
+      }
+        a.subN8{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner8.png) no-repeat;
+      }
+      a.subN8:hover{
+                    background: url(images/img_topbanner8on.png) no-repeat;
+      }
+        a.subN9{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner9.png) no-repeat;
+      }
+      a.subN9:hover{
+                    background: url(images/img_topbanner9on.png) no-repeat;
+      }
+      a.subN10{
+                    width:102px;
+                    height: 103px;
+					display:block;
+					transition:all 0.3s ease-out;
+					background:url(images/img_topbanner10.png) no-repeat;
+      }
+      a.subN10:hover{
+                    background: url(images/img_topbanner10on.png) no-repeat;
+      }
+      .con2Bg{/*검색 전체 박스*/
+          float: left;
+          padding: 5px 0 18px 0;
+          width:1060px;
+          height: 60px;
+          background: skyblue;
+          clear: both;
+      }
+      .b1{/*박스3개*/
+    display: block;
+    width: 80px;
+    height: 40px;
+    float: left;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px 0 0 14.5px;
+    padding: 5px 4px 5px;
+    background: #0877BF;
+    text-align: center;
+      }
+      .searchBox{/*입력+검색박스*/
+          width: 490px;
+          height: 70px;
+          float: left;
+          padding: 
+      }
+      .iFind{/*검색박스*/
+    display: block;
+    width: 50px;
+    height: 37px;
+    float: left;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right:  3px;
+    padding-top: 13px;
+    background: #0877BF;
+    text-align: center;
+          
+      }
+      .keyword2{/*입력박스*/
+          border: 2px solid #fff;
+          border-radius: 3px;
+          display: block;
+          float: left;
+          width: 400px;
+          height: 50px;
+          margin: 10px 10px;
+      }
+      .sns a{
+          border-radius: 3px;
+          display: block;
+          float: left;
+          width: 45px;
+          height: 45px;
+          margin-top: 14px;
+          margin-right: 17px;
+      }
+      .subBox1{
+            right: 100px;
+	        width:199px;
+	        height:150px;
+          margin: 0 0 0 30px;
+          float: left;
+      }
+          .subBox1 div{
+	width:199px;
+	height:150px;
+	background:url(images/x_soe1_m.jpg) no-repeat center center padding-box;
+	transition:all 0.3s ease-in;
+  }
+  .subBox1:hover div{
+	background:url(images/x_soe1.jpg) no-repeat center center padding-box;
+  }
+            .subBox2{
+            right: 100px;
+	        width:199px;
+	        height:150px;
+          margin-left: 30px;
+          float: left;
+      }
+          .subBox2 div{
+	width:199px;
+	height:150px;
+	background:url(images/ebookb.gif) no-repeat center center padding-box;
+	transition:all 0.3s ease-in;
+  }
+
+html {
+  box-sizing: border-box;
+}
+::selection {
+  background-color: #333;
+  color: white;
+}
+.wrapper {
+  width: 1060px;
+    margin: 20px 0;
+float: left;
+      }
+/* tabs */
+.tabs {
+  border-right: 1px solid #ccc;
+    width: 600px;
+    float: left;
+}
+      .tabs cf{
+          float: left;
+          width: 600px;
+      }
+.tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tabs input[type=radio] {
+  display: none;
+}
+.tabs label {
+  display: block;
+  float: left;
+  width: 178.6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  background-color: #f7f7f7;
+  text-align: center;
+  font-weight: 600;
+    font-size: 14px;
+  color: coral;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+.tabs label:hover {
+  background-color: white;
+}
+.tabs [id^="tab"]:checked + label {
+  border-bottom-color: white;
+  background: white;
+  color: #333;
+}
+
+.tab-content {/*라디오 박스 내용*/
+  display: none;
+  float: left;
+  width: 577px;
+  padding: 20px 0 20px 20px;
+    line-height: 25px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  background-color: white;
+    font-size: 13px;
+}
+
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3 {
+  display: block;
+}
+      
+      .cover{
+          background-color: #000;
+          color:gray;
+      }
+      .mBox1{
+          background-color:#000;
+          color:#102;
+            display:block;
+            font-size:13px;
+            font-style:normal;
+            height:56px;
+            left:632px;
+            bottom: -104px;
+            line-height:19.5px;
+            list-style-image:none;
+            list-style-type:none;
+            opacity:0.77;
+            text-align:left;
+            width:199px;
+      }
+      .mBox2{
+          background-color:#000;
+          color:#102;
+            display:block;
+            font-size:13px;
+            height:56px;
+            left:861px;
+            bottom: -104px;
+            line-height:19.5px;
+            list-style-image:none;
+            list-style-type:none;
+            opacity:0.77;
+            text-align:left;
+            width:199px;
+      }
+      .ti{/*교육감 텍스트*/
+          color:rgb(255, 255, 255);
+          display:block;
+          font-size:14px;
+          font-weight:bold;
+          height:30px;
+          line-height:25px;
+          list-style-image:none;
+          list-style-type:none;
+          padding-bottom:0px;
+          padding-left:20px;
+          padding-right:0px;
+          padding-top:2px;
+          text-align:left;
+      }
+      .T{/*경기교육정책 텍스트*/
+          padding-top:15px;
+          padding-left:23px;
+          font-size:16px;
+          font-style:normal;
+          font-weight:bold;
+      }
+      .mRelate1{
+          background-color: #f6f6f6;
+          border: 1px solid #ccc;
+          float: left;
+          clear: both;
+          margin-top: 20px;
+      }
+      .mRelate1 h3{
+          color: #373737;
+          margin: 10px 40px 10px 52px;
+      }
+
+      .mRelate1 li {/*선택박스 여백*/
+    margin: 15px 55px;
+}
+      .mRelate1 li select {/*선택박스*/
+    border-color: #ccc;
+    width: 230px;
+    height: 30px;
+}
+      .btn {/*GO박스*/
+          background-color:rgb(77, 77, 77);
+          color:rgb(255, 255, 255);
+          cursor:auto;
+          display:block;
+          font-size:13px;
+          font-style:normal;
+          height:30px;
+          line-height:30px;
+          list-style-image:none;
+          list-style-position:outside;
+          list-style-type:none;
+          right:0px;
+          text-align:center;
+          text-decoration-color:rgb(255, 255, 255);
+          text-decoration-line:none;
+          text-decoration-style:solid;
+          top:0px;
+          width:53px;
+          margin-left:20px;
+          float: right;
+      }
+      .bannerBox{/*배너모음 박스*/
+          background-color: #fff;
+          height: 230px;
+          width: 622px;
+          border: 1px solid #ccc;
+          float: left;
+          margin: 20px 0 0 20px;
+      }
+      .bannerBox h3{
+          color: #373737;
+          margin: 10px 40px 5px 30px;
+          width: 200px;
+      }
+      .banners{/*배너 이미지 그룹*/
+          position:relative;
+          margin: 10px 0 20px 20px;
+          height: 160px;
+          float: left;
+          width: 580px;
+
+      }
+
+      .bannerImages{
+          border: 1px solid #ccc;
+          float: left;
+          margin:4px 12px;
+      }
+      
+#footer{
+          background-color: #484848;
+          width: 1060px;
+          height: 183px;
+          overflow: hidden;
+      }
+#footer .bg{
+            width:auto;
+            padding:15px;
+            text-align:Center;
+      }
+#footer .logo{
+              display:block;
+              float: left;
+              padding:50px 15px}
+
+#footer a,.link,.bar, .addr{
+                                display: block;
+                                font-size:11px;
+                                color:#f3f4f4;
+                                font-size:13px;
+                                float: left;
+                                padding: 20px 7px
+      }
+#footer .fBanner,.fBanner2{
+                                    display:block;
+                                    width: 100px;
+                                    height: 50px;
+                                    float: left;
+                                    padding-right: 23px;
+      }
+#footer .fBanner img, #footer .fBanner2 img{/*로고 크기*/
+    width:100px;}
+      
+      
+      
+      #gnbNavi{
+          float:left;
+      }
+
+  </style>
+
+
+
+ </head>
+ 
+ <body>
+  <header>
+    <div class="logo">
+        <a href="#"><img src="images/logo_m.png" class="mainLogo" alt="경기도교육청"></a>
+    </div>
+     <div class="topMenu">
+        <a href="#"><img src="images/ico_home.png" alt="메인페이지로"> 메인</a>
+		<a href="#">로그인</a>
+		<a href="#">오시는 길</a>
+		<a href="#">사이트맵</a>
+		<a href="#">ENGLISH</a>
+		<a href="#">구사이트</a>
+				<input type="text" class="keyword" title="검색어" id="labelNews" alt="" name="qt">
+				<img src="images/ico_find2.png" class="hSearch">
+	</div>
+ </header>
+
+<nav id="navi">
+    <ul id="gnbNavi">
+        <li class="hn1">
+            <strong><a href="#">전자민원</a></strong>
+            <div class="m1">
+                <div class="m1_1">
+                    <ul>
+                    <li>
+                        <a href="#"><b>전자민원창구</b></a>
+                           <ul class="aaa">
+                            <li class><a href="#">- 민원안내</a></li>
+                            <li><a href="#">- 온라인일반민원신청</a></li>
+                            <li><a href="#">- 홈에듀증명민원</a></li>
+                            <li><a href="#">- 민원사전예약안내</a></li>
+                            <li><a href="#">- 검정/인가/승인/허가민원</a></li>
+                            <li><a href="#">- 자료실</a></li>
+                            <li><a href="#">- 민원옴부즈만소개</a></li>
+                            <li><a href="#">- 정보공개청구</a></li>
+                            <li><a href="#">- 사전정보 공표목록</a></li>
+                           </ul>
+                     </li>
+                     <li>
+                         <a href="#"><b>경기에듀콜센터</b></a>
+                     </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#"><b>경기교육행정서비스</b></a>
+                                <ul class="aaa">
+                                    <li><a href="#">- 서비스안내</a></li>
+                                    <li><a href="#">- 서비스헌장</a></li>
+                                    <li><a href="#">- 공통이행기준</a></li>
+                                    <li><a href="#">- 부서별이행기준</a></li>
+                                    <li><a href="#">- 지침/예규</a></li>
+                                    <li><a href="#">- 매뉴얼및우수사례</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#"><b>스승찾기</b></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    <li class="hn2">
+        <strong><a href="#">뉴스/소식</a></strong>
+            <div class="m2">
+                <div class="m2_1">
+                    <ul>
+                        <li><a href="#"><b>공지사항</b></a></li>
+                        <li><a href="#"><b>보도자료</b></a>
+                            <ul class="aaa">
+                                <li><a href="#">- 도교육청</a></li>
+                                <li><a href="#">- 교육지원청</a></li>
+                                <li><a href="#">- 직속기관</a></li>
+                                <li><a href="#">- 전체</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><b>고시/공고/입법예고</b></a>
+                            <ul class="aaa">
+                                <li><a href="#">- 이용안내</a></li>
+                                <li><a href="#">- 고시등록부</a></li>
+                                <li><a href="#">- 공시등록부</a></li>
+                                <li><a href="#">- 입법예고</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><b>경기교육소식</b></a>
+                            <ul class="aaa">
+                                <li><a href="#">- 미디어 경청</a></li>
+                                <li><a href="#">- 경기교육E-BOOK</a></li>
+                                <li><a href="#">- 경기도의회</a></li>
+                                <li><a href="#">- 생방송보기</a></li>
+                                <li><a href="#">- 교육위원회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    <li class="hn3"><strong><a href="#">주민참여</a></strong>
+            <div class="m3">
+                <div class="m3_1">
+                    <ul>
+                        <li><a href="#"><b>자율참여공간</b></a>
+                            <ul class="aaa">
+                                <li><a href="#">- 자유게시판</a></li>
+                                <li><a href="#">- 0416우체통</a></li>
+                                <li><a href="#">- 칭찬합시다</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><b>주민참여예산</b></a>
+                            <ul class="aaa">
+                                <li><a href="#">- 주민참여예산제 운영</a></li>
+                                <li><a href="#">- 주민참여예산 참여게시판</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><b>정책토론</b></a></li>
+                        <li><a href="#"><b>제안제도</b></a>
+                            <ul class="aaa">
+                                <li><a href="#">- 국민제안</a></li>
+                                <li><a href="#">- 국민제안 결과확인</a></li>
+                                <li><a href="#">- 공무원제안</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><b>안전신고</b></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    <li class="hn4"><strong><a href="#">교육청 소개</a></strong>
+            <div class="m4">
+               <div class="m4_1">
+                    <ul>
+                        <li><a href="#"><b>열린교육감실</b></a>
+                           <ul class="aaa">
+                                <li><a href="#">- 교육감인사말</a></li>
+                                <li><a href="#">- 역대교육감</a></li>
+                                <li><a href="#">- 교육감에바란다</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="#"><b>경기교육정책</b></a></li>
+                        <li><a href="#"><b>경기교육브랜드</b></a></li>
+                        <li><a href="#"><b>경기교육역사</b></a></li>
+                        <li><a href="#"><b>조직안내</b></a>
+                            <ul class="aaa">
+                                <li><a href="#">- 조직도</a></li>
+                                <li><a href="#">- 청사배치도</a></li>
+                                <li><a href="#">- 찾아오시는길</a></li>
+                                <li><a href="#">- 교육지원청</a></li>
+                                <li><a href="#">- 직속기관</a></li>
+                                <li><a href="#">- 학교찾기</a></li>
+                                <li><a href="#">- 신설학교찾기</a></li>
+                                <li><a href="#">- 경기교육수첩</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<section>
+    <div id="container">
+        <div class="mainHeader">
+            <article class="mainBox1">
+                    <div class="mainSlider1"></div>
+            </article>
+            <article class="mainBox2">
+                    <div class="">
+                        <div class="Banner_hh">
+                            <a href="#"><img src="images/학생학부모.png" alt="학생,학부모 공간"></a>
+                        </div>
+                        <div class="Banner_gg">
+                            <a href="#"><img src="images/교사교직원.png" alt="교사,교직원 공간"></a>
+                        </div>
+                    </div>
+            </article>
+            <article class="mainBox3">
+                <div class="mainSlider2"></div>
+                <!--mainSlider2-->
+            </article>
+            <article class="mainBox4">
+                    <div class="">
+                        <div class="Banner_is">
+                            <a href="#"><img src="images/일반수험생.png" alt="일반,수험생 공간"></a>
+                        </div>
+                        <div class="Banner_gj">
+                            <a href="#"><img src="images/공지사항.png" alt="공지사항 공간"></a>
+                        </div>
+                    </div>
+                </article>
+        </div>
+        <!--mainHeader-->
+        <div class="middleM">
+            <ul>
+                <li class="subN">
+                    <a href="#" class="subN1"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN2"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN3"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN4"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN5"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN6"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN7"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN8"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN9"></a>
+                </li>
+                <li class="subN">
+                    <a href="#" class="subN10"></a>
+                </li>
+            </ul>
+        </div>
+        <!--/middleM/-->
+        <div class="con2Bg">
+            <div class="forWeb">
+                <a href="#" class="b1">부조리신고<br>및 상담</a>
+                <a href="#" class="b1">청렴희망<br>연구소</a>
+                <a href="#" class="b1">청탁금지법<br>안내 및 신고</a>
+            <div class="searchBox">
+                <span class="con">
+                    <label for="labelNews2"></label>
+                        <input type="text" class="keyword2" title="검색어" id="qt2">
+                    <a href="#" class="iFind">검색</a>
+                </span>
+            </div>
+            <!--search-->
+            </div>
+            
+        <div class="sns">
+            <a href="#" target="_blank"><img src="images/ico_sns_facebook.png" alt="페이스북"></a>
+            <a href="#" target="_blank"><img src="images/ico_sns_kakaostory.png" alt="카카오스토리"></a>
+            <a href="#" target="_blank"><img src="images/ico_sns_blog.png" alt="블로그"></a>
+            <a href="#" target="_blank"><img src="images/ico_sns_reporter.png" alt="경청기자단"></a>
+        </div>
+        </div>
+        <div>
+            <div id="myball"></div>
+        </div>
+    <div class="wrapper">
+
+	<div class="tabs cf">
+		<input type="radio" name="tabs" id="tab1" checked>
+		<label for="tab1">
+        입찰정보
+      </label>
+		<input type="radio" name="tabs" id="tab2">
+		<label for="tab2">
+        시험/채용공고
+      </label>
+		<input type="radio" name="tabs" id="tab3">
+		<label for="tab3">
+        청렴나눔
+      </label>
+		<div id="tab-content1" class="tab-content">
+		
+			<ul>
+                <li><a href="#">- 2017년 경기도교육지원청 교육장배 학생수영대회 사업 위탁 공고</a></li>
+                <li><a href="#">- 2017년도 구리시 관내 학원 및 교습소 석면안전진단사업 안내</a></li>
+				<li><a href="#">- 계약 해지 통지 공시송달 공고(의정부교육지원청)</a></li>
+        <li><a href="#">- 공시송달 공고(구리남양주교육지원청)</a></li>
+        <li><a href="#">- 2017 제3회 행복교육 학부모교실 운영 알림</a></li>
+			</ul>
+		</div>
+		<div id="tab-content2" class="tab-content">
+			<ul>
+				<li><a href="#">- 진건고 다목적강당 및 교실 증축 공사 설계용역 입찰공고 (긴급)</a></li>
+				<li><a href="#">- 인창초 동복분교장 교실 재배치 및 교실 증축공사 폐기물 처리용역 입찰공고 (긴급)</a></li>
+				<li><a href="#">- 사릉초 구조보강에 따른 교실 및 화장실 기계설비공사 수의계약 견적제출 안내 공고</a></li>
+				<li><a href="#">- 용신초 구조보강에 따른 교실 및 화장실수리 소방공사 수의계약 견적제출 안내 공고</a></li>
+				<li><a href="#">- 오남초 구조보강에 따른 교실 및 화장실수리 통신공사 수의계약 견적제출 안내 공고</a></li>
+			</ul>
+		</div>
+		<div id="tab-content3" class="tab-content">
+			<ul>
+				<li><a href="#">- 구리여자고등학교 기초학력 반올림교실 프로그램 지도강사 모집 공고</a></li>
+				<li><a href="#">- (인창초)방과후학교 축구교실 위탁강사 모집 공고</a></li>
+				<li><a href="#">- 인창중학교 2017학년도 여름방학 및 2학기 방과후학교 개인위탁 공모</a></li>
+				<li><a href="#">- 2017학년도 수택초등학교 특수학급 방과후학교[체육] 강사 채용 공고</a></li>
+				<li><a href="#">- 2017학년도 용신초등학교 방과후 외부강사(국어논술) 채용 공고</a></li>
+			</ul>
+		</div>
+
+	</div>
+			<article class="subBox1">
+            <div class="superintendent"></div>
+              <span class="cover"></span>
+                <span class="mBox1"><strong class="ti">· 교육감에게 바란다<br>· 교육 매니페스토</strong></span>
+            </article>
+            
+            <article class="subBox2">
+            <div class="superintendent2"></div>
+                <span class="cover"></span>
+                   <span class="mBox2"><strong class="ti T">2017년 경기교육정책</strong></span>
+                </article>
+        <div class="gLeft">
+            <!--관련기관 바로가기-->
+            <div class="mRelate1">
+                <h3> ▶ 관련기관 바로가기</h3>
+                <ul>
+                    <li>
+                        <div class="con">
+                            <select name="relationorganization" id="relationorganization" title="관련기관 바로가기">
+                                <option value="#">교육부</option>
+                                <option value="#">경기도의회 교육위원회</option>
+                                <option value="#">경기도의회</option>
+                                <option value="#">경기도학교안전공제회</option>
+                                <option value="#">광주광역시교육청</option>
+                                <option value="#">대구광역시교육청</option>
+                                <option value="#">대전광역시교육청</option>
+                                <option value="#">부산광역시교육청</option>
+                                <option value="#">서울특별시교육청</option>
+                                <option value="#">울산광역시교육청</option>
+                                <option value="#">인천광역시교육청</option>
+                                <option value="#">강원도교육청</option>
+                                <option value="#">경상남도교육청</option>
+                                <option value="#">경상북도교육청</option>
+                                <option value="#">전라남도교육청</option>
+                                <option value="#">전라북도교육청</option>
+                                <option value="#">충청남도교육청</option>
+                                <option value="#">충청북도교육청</option>
+                                <option value="#">제주특별자치도교육청</option>
+                                <option value="#">세종특별자치시교육청</option>
+                                <option value="#">국제교육진흥원</option>
+                                <option value="#">경기교육장학재단</option>
+                                <option value="#">한국교육개발원</option>
+                                <option value="#">한국교육학술정보원</option>
+                                <option value="#">한국직업능력개발원</option>
+                            </select>
+                            <a href="###" class="btn" title="새창열림">GO</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <select name="directorganization" id="directorganization" class="mselect" title="직속기관 바로가기">
+                                <option value>::직속기관 바로가기</option>
+                                <option value="#">경기도교육연수원</option>
+                                <option value="#">경기도교육복지종합센터</option>
+                                <option value="#">경기도교육정보기록원</option>
+                                <option value="#">경기도교직원가평수덕원</option>
+                                <option value="#">재단법인 경기도교육연구원</option>
+                                <option value="#">경기도교직원안성수덕원</option>
+                                <option value="#">경기도교직원연천수덕원</option>
+                                <option value="#">경기도과학교육원</option>
+                                <option value="#">경기도도당학생체육관</option>
+                                <option value="#">경기도립과천도서관</option>
+                                <option value="#">경기도립녹양도서관</option>
+                                <option value="#">경기도립발안도서관</option>
+                                <option value="#">경기도립성남도서관</option>
+                                <option value="#">경기도립중앙도서관</option>
+                                <option value="#">경기도평화교육연수원</option>
+                                <option value="#">경기도유아체험교육원</option>
+                                <option value="#">경기도율곡교육연수원</option>
+                                <option value="#">경기도외국어교육연수원</option>
+                                <option value="#">경기도평촌학생체육관</option>
+                                <option value="#">김포학생야영장</option>
+                                <option value="#">양평학생야영장</option>
+                                <option value="#">여주학생야영장</option>
+                                <option value="#">연천학생야영장</option>
+                                <option value="#">용인학생야영장</option>
+                                <option value="#">포천학생야영장</option>
+                                <option value="#">경기도학생교육원</option>
+                                <option value="#">경기평생교육학습관</option>
+                                <option value="#">경기도농업계고등학교공동실습소</option>
+                                <option value="#">경기도공업계고등학교공동실습소</option>
+                            </select>
+                            <a href="###" class="btn" title="새창열림">GO</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <select name="regioneducationoffice" id="regioneducationoffice" class="mselect" title="교육지원청 바로가기">
+                                <option value>::교육지원청 바로가기</option>
+                                <option value="#">가평교육지원청</option>
+                                <option value="#">고양교육지원청</option>
+                                <option value="#">광명교육지원청</option>
+                                <option value="#">광주하남교육지원청</option>
+                                <option value="#">구리남양주교육지원청</option>
+                                <option value="#">군포의왕교육지원청</option>
+                                <option value="#">김포교육지원청</option>
+                                <option value="#">동두천양주교육지원청</option>
+                                <option value="#">부천교육지원청</option>
+                                <option value="#">성남교육지원청</option>
+                                <option value="#">수원교육지원청</option>
+                                <option value="#">시흥교육지원청</option>
+                                <option value="#">안산교육지원청</option>
+                                <option value="#">안성교육지원청</option>
+                                <option value="#">안양과천교육지원청</option>
+                                <option value="#">양평교육지원청</option>
+                                <option value="#">여주교육지원청</option>
+                                <option value="#">연천교육지원청</option>
+                                <option value="#">용인교육지원청</option>
+                                <option value="#">의정부교육지원청</option>
+                                <option value="#">이천교육지원청</option>
+                                <option value="#">파주교육지원청</option>
+                                <option value="#">평택교육지원청</option>
+                                <option value="#">포천교육지원청</option>
+                                <option value="#">화성오산교육지원청</option>
+                            </select>
+                            <a href="###" class="btn" title="새창열림">GO</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <select name="regioneducationofficelist2" id="regioneducaregioneducationofficelist2tionoffice" class="mselect" title="유관기관 바로가기">
+                                <option value>::유관기관 바로가기</option>
+                                <option value="#">재단법인 경기도교육연구원</option>
+                            </select>
+                            <a href="###" class="btn" title="새창열림">GO</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--관련기관 바로가기-->
+        </div>
+        <div class="bannerBox">
+            <h3> ▶ 관련배너모음</h3>
+                <ul>
+                    <li>
+                        <div class="banners">
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner3.gif"></a>
+                                </div>
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner4.gif"></a>
+                                </div>
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner5.gif"></a>
+                                </div>
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner7.gif"></a>
+                                </div>
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner8.gif"></a>
+                                </div>
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner11.gif"></a>
+                                </div>
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner16.gif"></a>
+                                </div>
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner17.gif"></a>
+                                </div>
+                                <div class="bannerImages">
+                                <a href="#"><img src="images/banner/banner21.gif"></a>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+        </div>
+</div>
+   
+    </div>
+    <!--//container-->
+</section>
+<div id="footer">
+    <div class="bg">
+        <span class="logo">
+            <img src="images/logo_footer.png" alt="경기도교육청">
+        </span>
+        <div class="link"></div>
+            <a href="#">청사배치도</a>
+        
+        <div class="bar">｜</div>
+            <a href="#">찾아오시는 길</a>
+        
+        <div class="bar">｜</div>
+            <a href="#">개인정보처리방침</a>
+        
+        <div class="bar">｜</div>
+            <a href="#">홈페이지이용약관</a>
+        
+        <div class="bar">｜</div>
+            <a href="#">홈페이지 개선의견</a>
+        
+    </div>
+    <div class="addr">
+        남부청사 (16279) 경기도 수원시 장안구 조원로 18 ☎ 031-1396, 031-249-0114<br>
+        북부청사 (11759) 경기도 의정부시 동일로 700<br>
+        Copyright(c) 2014 Gyeonggido Office of Education, All Right Reserved
+    </div>
+    <span class="fBanner">
+        <a href="#" target="_blank">
+            <img src="images/ban_kec.png" alt="(031)1396 경기에듀콜센터">
+        </a>
+    </span>
+    <span class="fBanner2">
+       <a href="#" target="_blank">
+        <img src="images/wa.png" alt="웹접근성인증마크">
+        </a>
+    </span>
+</div>
+ </body>
+</html>
